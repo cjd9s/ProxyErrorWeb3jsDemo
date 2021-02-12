@@ -14,7 +14,7 @@ To get this to work:
 
   In the test files, the store function is given an argument of 0 which violates the require statement in the contract. This will cause the     transaction to revert. You can ignore the expectRevert test case as that works in both scenarios. You should note that the .catch statement for both the direct function call and proxy function call works. There is an error because of the violated require statement and that is reflected in what is printed in the console.
 
-8. To see how a web3.js contract object handles the error(specifically reverted transactions from violated require statements), in the terminal type 'npm run dev'
+8. To see how a web3.js contract object handles the error(specifically reverted transactions from violated require statements), first in the terminal type 'truffle migrate'. Then, in the terminal type 'npm run dev'.
 9. When the webpage opens in a browswer, press F12 to open the DevTools.
 10. Enter a 1 into the box, and click the 'Store - Event Emitter' button
 
