@@ -22,13 +22,13 @@ contract('Box (proxy)', function () {
   });
  
   // Test case
-  it('non-zero number cannot be stored', async function () {
+  it('non-zero number cannot be stored - PROXY expectRevert', async function () {
     // Store an invalid value
     await expectRevert(this.box.store(0), 'Box: store non-zero numbers');
   });
 
   // .catch Test case
-  it('non-zero number cannot be stored', async function () {
+  it('non-zero number cannot be stored - PROXY .catch', async function () {
     // Store an invalid value
     await this.box.store(0)
     .catch(function(error){
