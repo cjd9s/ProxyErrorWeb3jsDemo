@@ -26,7 +26,7 @@ To get this to work:
   
 12. Now comes the illuminating part. Enter a 0 into the box, and click the 'Store - Event Emitter' button.
 
-  This value violates the require statement in the contract and reverts the transaction. However, unlike the Truffle contract instance, the .catch statement is not invoked. Instead, an error statement is shown in the console. It correctly states that this was a revert and gives the error description defined in the require statement. However, this hasn't come through my code and I don't know how to capture that information. This is the essence of my problem. Why does .catch work with the Truffle contract instance, but not the web3.js contract object?
+  This value violates the require statement in the contract and reverts the transaction. However, unlike the Truffle contract instance, the .error block of the event emitter is not invoked. Instead, an error statement is shown in the console. It correctly states that this was a revert and gives the error description defined in the require statement. However, this hasn't come through my code and I don't know how to capture that information. This is the essence of my problem. Why does .catch work with the Truffle contract instance, but not the web3.js contract object?
   
   
 13. Instead of the error event from the event emitter of sendTransaction, let's try a .catch. Enter a 0 into the box, and click the 'Store - Catch' button. You should get the same as from step 12.
